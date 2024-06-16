@@ -29,6 +29,7 @@ public class BridgeConstructorHandle : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down) * 1000, Color.white);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, Mathf.Infinity))
         {
+            //bridge collide checks
             if (hit.transform.gameObject.tag == "Stair")
             {
                 // for handling going backwards in the middle of the bridge
