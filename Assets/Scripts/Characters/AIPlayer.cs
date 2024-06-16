@@ -6,11 +6,14 @@ using static UnityEngine.GraphicsBuffer;
 
 public class AIPlayer : G_Character
 {
+    [SerializeField] private List<GameObject> checkBoolean = new List<GameObject>();
     [SerializeField] private List<GameObject> targets = new List<GameObject>();
     private NavMeshAgent agent;
     [SerializeField] private Vector3 targetTransform;
     [SerializeField] private bool haveTarget;
 
+    [SerializeField] private List<GameObject> checkbrickSpawned = new List<GameObject>();
+    private int numOfBricks = 0;
     private GameObject brickSpawnContainer;
     private GameObject availableBridges;
     [SerializeField] private GameObject targetBridge;
