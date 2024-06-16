@@ -107,10 +107,10 @@ public class AIPlayer : G_Character
 
     private Vector3 destination;
 
-    //property tra ve ket qua xem la da toi diem muc tieu hay chua
+    //check if reached the right position or not.
     public bool IsDestionation => Vector3.Distance(transform.position, destination + (transform.position.y - destination.y) * Vector3.up) < 0.1f;
 
-    //set diem den
+    //set arrival position
     public void SetDestination(Vector3 destination)
     {
    
